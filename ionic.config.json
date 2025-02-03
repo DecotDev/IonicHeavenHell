@@ -1,0 +1,7 @@
+{
+  "name": "heavenHell",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
