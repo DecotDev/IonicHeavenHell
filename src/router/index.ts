@@ -55,17 +55,49 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/Tab2Page.vue')
       },
       {
+        path: 'tab2/profile',
+        component: () => import('@/views/ProfilePage.vue'),
+      },
+      {
+        path: 'tab2/settings',
+        component: () => import('@/views/SettingsPage.vue'),
+      },
+      {
         path: 'tab3',
         component: () => import('@/views/Tab3Page.vue')
+      },
+      {
+        path: 'tab3/profile',
+        component: () => import('@/views/ProfilePage.vue'),
+      },
+      {
+        path: 'tab3/settings',
+        component: () => import('@/views/SettingsPage.vue'),
       },
       {
         path: 'tab4',
         component: () => import('@/views/Tab4Page.vue')
       },
       {
+        path: 'tab4/profile',
+        component: () => import('@/views/ProfilePage.vue'),
+      },
+      {
+        path: 'tab4/settings',
+        component: () => import('@/views/SettingsPage.vue'),
+      },
+      {
         path: 'tab5',
         component: () => import('@/views/Tab5Page.vue')
-      }
+      },
+      {
+        path: 'tab5/profile',
+        component: () => import('@/views/ProfilePage.vue'),
+      },
+      {
+        path: 'tab5/settings',
+        component: () => import('@/views/SettingsPage.vue'),
+      },
     ]
   }
 ]
