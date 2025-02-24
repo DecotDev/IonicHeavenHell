@@ -31,13 +31,13 @@
           <p class="content">Ver 0.42 - Coyote Jump is here!</p>
         </ion-card-content>
       </ion-card>
-      <ion-card @click="goToNew" class="card">
+      <ion-card @click="goToNew2" class="card">
         <ion-card-content>
           <img src="@/assets/new02.png" alt="New Image">
-          <p class="content">Ver 0.41 - Code refactor </p>
+          <p class="content">Ver 0.41 - Code refactor</p>
         </ion-card-content>
       </ion-card>
-      <ion-card @click="goToNew" class="card">
+      <ion-card @click="goToNew3" class="card">
         <ion-card-content>
           <img src="@/assets/new03.png" alt="New Image">
           <p class="content">Ver 0.38 - Wall Slide!</p>
@@ -75,9 +75,9 @@
   background-color: rgb(19, 19, 19);
   font-size: 1.6rem;
   border-radius: 10px;
-  padding: 6px;
-  margin-left: -6px;
-  margin-right: -6px;
+  padding: 8px 0px 4px 16px;
+  margin-left: 0px;
+  margin-right: -0px;
 }
 .card {
   color: red;
@@ -100,6 +100,12 @@ const router = useRouter();
   // Navigate to LoginPage.vue on tap
   const goToNew = () => {
     router.push('/tabs/tab3/new');
+  };
+  const goToNew2 = () => {
+    router.push('/tabs/tab3/new2');
+  };
+  const goToNew3 = () => {
+    router.push('/tabs/tab3/new3');
   };
 </script>
 
