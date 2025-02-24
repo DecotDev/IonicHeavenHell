@@ -31,7 +31,7 @@
           </ion-button>
   
           <!-- Sign In Button (Red) -->
-          <ion-button expand="full" class="sign-in-button" router-link="/logging">
+          <ion-button class="sign-in-button" router-link="/logging">
             Sign In
           </ion-button>
   
@@ -70,15 +70,16 @@
   
   /* Logo Section */
   .logo-container {
-    height: auto;
+    height: 36%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .logo {
-    max-width: 94%;
-    margin-top: 6%;
+    height: auto;
+    width: auto;
+
   }
   
   /* Login Form - Centered Horizontally */
@@ -95,9 +96,9 @@
   .input-field {
     margin-top: 8%;
     width: 100%;
-    background: #f0f0f0;
+    background: #979797;
     border-radius: 20px;
-    font-size: 1.85vh;
+    font-size: 100%;
     padding: 3%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -113,6 +114,7 @@
     width: 100%;
     padding-left: 10%;
     border-radius: 25px;
+    color: #ff5454;
   }
   
   /* Help Buttons - Closer & Left-Aligned */
@@ -127,7 +129,7 @@
   /* Sign In Button - Red */
   .sign-in-button {
     width: 100%;
-    height: 10%;
+    height: 60px;
     font-size: 2vh;
     margin-top: 6%;
     color: #FF0000;
@@ -135,7 +137,6 @@
     background-color: #FF0000;
     color: white;
     border-radius: 25px;
-    
   }
 
   /* Red Waves Decoration */
@@ -144,9 +145,9 @@
     height: 20%;
     background: url("@/assets/red_wave.svg") no-repeat center bottom;
     background-size: cover;
-    position: absolute;
     left: 0;
     bottom: 0;
+    position: absolute;
   }
   </style>
   

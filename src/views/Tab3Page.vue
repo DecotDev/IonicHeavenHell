@@ -1,5 +1,5 @@
 <template>
-  <ion-page>
+  <ion-page class="page">
     <ion-header>
       <ion-toolbar>
         
@@ -11,7 +11,9 @@
 
           <!-- Centered title -->
           <div class="title-container">
-            <ion-title>Tab 3</ion-title>
+            <img src="@/assets/logo.png" alt="App Logo" class="logo" />
+
+            <!--<ion-title>Home</ion-title>-->
           </div>
 
           <!-- Right-aligned button -->
@@ -22,13 +24,25 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 3</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
       <ExploreContainer name="Tab 3 page" />
+      <ion-card @click="goToNew" class="card">
+        <ion-card-content>
+          <img src="@/assets/new01.png" alt="New Image">
+          <p class="content">Ver 0.42 - Coyote Jump is here!</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card @click="goToNew" class="card">
+        <ion-card-content>
+          <img src="@/assets/new02.png" alt="New Image">
+          <p class="content">Ver 0.41 - Code refactor </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card @click="goToNew" class="card">
+        <ion-card-content>
+          <img src="@/assets/new03.png" alt="New Image">
+          <p class="content">Ver 0.38 - Wall Slide!</p>
+        </ion-card-content>
+      </ion-card>
     </ion-content>
   </ion-page>
 </template>
@@ -46,13 +60,60 @@
 /* Centers the title properly */
 .title-container {
   position: absolute;
+  max-width: 16%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  padding: 20px 0px 12px 0px;
+}
+.logo {
+  width: auto;
+  height: 100%;
+}
+.content {
+  color: rgb(255, 255, 255);
+  background-color: rgb(19, 19, 19);
+  font-size: 1.6rem;
+  border-radius: 10px;
+  padding: 6px;
+  margin-left: -6px;
+  margin-right: -6px;
+}
+.card {
+  color: red;
+  background-color: rgb(37, 37, 37);
+}
+.page {
+  color: rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0);
 }
 </style>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButtons} from '@ionic/vue';
+import { image } from 'ionicons/icons';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, IonCard, IonCardContent, IonCardTitle} from '@ionic/vue';
 import ExploreContainer from '@/components/ExploreContainer.vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+  
+  // Navigate to LoginPage.vue on tap
+  const goToNew = () => {
+    router.push('/tabs/tab3/new');
+  };
 </script>
+
+<!--
+      <ion-card @click="goToNew">
+
+
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+  
+  // Navigate to LoginPage.vue on tap
+  const goToNew = () => {
+    router.push('/login');
+  };
+
+-->

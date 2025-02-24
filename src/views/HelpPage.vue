@@ -88,7 +88,7 @@
   /* Terms of Use Title - Positioned on the Waves */
   .title-user {
     position: absolute;
-    top: 20%;
+    top: 21%;
     left: 25%;
     transform: translateX(-50%);
     font-size: 3vh;
@@ -97,7 +97,7 @@
   }
   .title-password {
     position: absolute;
-    top: 56%;
+    top: 54%;
     left: 35%;
     transform: translateX(-50%);
     font-size: 3vh;
@@ -110,7 +110,7 @@
     position: absolute;
     top: 28%;
     width: 94%;
-    height: 25%;
+    height: 23%;
     overflow-y: auto;
     color: black;
     background: rgb(255, 29, 29);
@@ -122,12 +122,13 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
     text-align: justify;
+    font-size: 1.2rem;
   }
   .time-password {
     position: absolute;
-    top: 64%;
+    top: 61%;
     width: 94%;
-    height: 25%;
+    height: 29%;
     overflow-y: auto;
     color: black;
     background: rgb(255, 29, 29);
@@ -139,6 +140,7 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
     text-align: justify;
+    font-size: 1.2rem;
   }
   
   /* Accept Button - Bottom Right */
@@ -147,8 +149,8 @@
     bottom: 2%;
     right: 5%;
     background-color: #FF0000;
-    color: rgb(184, 0, 0);
-    font-size: 2.4vh;
+    color: rgb(54, 0, 0);
+    font-size: 1.7rem;
     border-radius: 20px;
   }
   </style>
