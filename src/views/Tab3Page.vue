@@ -1,30 +1,35 @@
 <template>
   <ion-page class="page">
-    <ion-header>
-      <ion-toolbar>
+    <ion-header class="real_header" >
+      <ion-toolbar class="header">
         
         <div class="toolbar-container">
-          <!-- Left-aligned button -->
+            
           <ion-buttons slot="start">
-            <ion-button router-link="/tabs/tab3/profile">Profile</ion-button>
+            <!--<ion-button router-link="/tabs/tab3/profile">Profile
+              
+            </ion-button>-->
+            <img class="profile" @click="goToProfile" src="@/assets/user_icon.png" alt="User">
+          
           </ion-buttons>
 
           <!-- Centered title -->
           <div class="title-container">
-            <img src="@/assets/logo.png" alt="App Logo" class="logo" />
+            <img src="@/assets/logo_round.png" alt="App Logo" class="logo" />
 
             <!--<ion-title>Home</ion-title>-->
           </div>
 
-          <!-- Right-aligned button -->
           <ion-buttons slot="end">
-            <ion-button router-link="/tabs/tab3/settings">Settings</ion-button>
+            <img class="settings" @click="goToSettings" src="@/assets/settings_icon.png" alt="User">
+             <!--<ion-button router-link="/tabs/tab3/settings">Settings</ion-button>           -->
           </ion-buttons>
         </div>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
       <ExploreContainer name="Tab 3 page" />
+      <img class="title" src="@/assets/title_home.png" alt="Dev news">
       <ion-card @click="goToNew" class="card">
         <ion-card-content>
           <img src="@/assets/new01.png" alt="New Image">
@@ -48,9 +53,25 @@
 </template>
 
 <style scoped>
+.title {
+  margin: 10px 0px -4px 13px;
+}
+.settings {
+  margin-right: 8px;
+}
+.profile {
+  margin-left: 12px;
+}
+.header {
+  height: 100%;
+}
+.real_header {
+  height: 90px;
+}
 /* Ensures the toolbar content is correctly aligned */
 .toolbar-container {
   display: flex;
+  height: 94px;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -60,14 +81,15 @@
 /* Centers the title properly */
 .title-container {
   position: absolute;
-  max-width: 16%;
+  max-width: 24%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  padding: 20px 0px 12px 0px;
+  padding: 8px 0px 0px 0px;
 }
 .logo {
   width: auto;
+  align-items: center;
   height: 100%;
 }
 .content {
@@ -106,6 +128,12 @@ const router = useRouter();
   };
   const goToNew3 = () => {
     router.push('/tabs/tab3/new3');
+  };
+  const goToProfile = () => {
+    router.push('/tabs/tab3/profile');
+  };
+  const goToSettings = () => {
+    router.push('/tabs/tab3/settings');
   };
 </script>
 
