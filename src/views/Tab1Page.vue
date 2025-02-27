@@ -1,39 +1,37 @@
 <template>
   <ion-page class="page">
-    <ion-header class="real_header" >
+    <ion-header class="real_header">
       <ion-toolbar class="header">
-        
         <div class="toolbar-container">
-            
           <ion-buttons slot="start">
-            <!--<ion-button router-link="/tabs/tab3/profile">Profile
-              
-            </ion-button>-->
             <img class="profile" @click="goToProfile" src="@/assets/user_icon.png" alt="User">
-          
           </ion-buttons>
-
-          <!-- Centered title -->
           <div class="title-container">
             <img src="@/assets/logo_round.png" alt="App Logo" class="logo" />
-
-            <!--<ion-title>Home</ion-title>-->
           </div>
-
           <ion-buttons slot="end">
-            <img class="settings" @click="goToSettings" src="@/assets/settings_icon.png" alt="User">
-             <!--<ion-button router-link="/tabs/tab3/settings">Settings</ion-button>           -->
+            <img class="settings" @click="goToSettings" src="@/assets/settings_icon.png" alt="Settings">
           </ion-buttons>
         </div>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ExploreContainer name="Tab 1 page" />
       <img class="title" src="@/assets/title_ranking.png" alt="Ranking">
-
+      <Leaderboard />
     </ion-content>
   </ion-page>
 </template>
+
+<script setup lang="ts">
+import { IonPage, IonHeader, IonToolbar, IonContent, IonButtons } from '@ionic/vue';
+import { useRouter } from 'vue-router';
+import Leaderboard from '@/components/Leaderboard.vue';
+
+const router = useRouter();
+
+const goToProfile = () => router.push('/tabs/tab1/profile');
+const goToSettings = () => router.push('/tabs/tab1/settings');
+</script>
 
 <style scoped>
 .title {
@@ -94,22 +92,6 @@
 }
 </style>
 
-<script setup lang="ts">
-import { image } from 'ionicons/icons';
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, IonCard, IonCardContent, IonCardTitle} from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-  
-  // Navigate to LoginPage.vue on tap
-  const goToProfile = () => {
-    router.push('/tabs/tab1/profile');
-  };
-  const goToSettings = () => {
-    router.push('/tabs/tab1/settings');
-  };
-</script>
 
 <!--
       <ion-card @click="goToNew">

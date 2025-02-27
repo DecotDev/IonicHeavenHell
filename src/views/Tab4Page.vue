@@ -33,20 +33,44 @@
       <ion-card class="card" @click="changeSkin">
         
         <img :src="currentSkin" :alt="'Skin Image'" class="skin-image">
-        <p>Click to change the skin!</p>
+        <p class="promt_text">Click to change the skin!</p>
+        <p class="down_text">The skin selected will be displayed on game after 2 minutes of setting it. If tehre is any issue or the skin is not showing correctly, a game restart will solve any issue and display the selected one.</p>
       </ion-card>
     </ion-content>
   </ion-page>
 </template>
 
 <style scoped>
+.promt_text {
+  text-align: center;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 1.6rem;
+  
+}
+.down_text {
+  margin-left: 6px;
+  height: 140px;
+  margin-right: 6px;
+  margin-bottom: -10px;
+  padding-left: 8px;
+  padding-right: 10px;
+  padding-top: 8px;
+  font-size: 1.2rem;
+  text-align: justify;
+  color: white;
+  background-color: rgb(26, 25, 25);
+  
+
+}
 .title {
   margin: 10px 0px -4px 13px;
 }
 .card {
   align-items: center;
   min-height: fit-content;
-  height: 87%;
+  height: 87.8%;
+  margin-bottom: 0px;
 }
 .settings {
   margin-right: 8px;

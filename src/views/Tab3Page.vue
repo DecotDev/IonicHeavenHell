@@ -33,19 +33,19 @@
       <ion-card @click="goToNew" class="card">
         <ion-card-content>
           <img src="@/assets/new01.png" alt="New Image">
-          <p class="content">Ver 0.42 - Coyote Jump is here!</p>
+          <p class="content_t">Ver 0.42 - Coyote Jump is here!</p>
         </ion-card-content>
       </ion-card>
       <ion-card @click="goToNew2" class="card">
         <ion-card-content>
           <img src="@/assets/new02.png" alt="New Image">
-          <p class="content">Ver 0.41 - Code refactor</p>
+          <p class="content_t">Ver 0.41 - Code refactor</p>
         </ion-card-content>
       </ion-card>
       <ion-card @click="goToNew3" class="card">
         <ion-card-content>
           <img src="@/assets/new03.png" alt="New Image">
-          <p class="content">Ver 0.38 - Wall Slide!</p>
+          <p class="content_t">Ver 0.38 - Wall Slide!</p>
         </ion-card-content>
       </ion-card>
     </ion-content>
@@ -92,7 +92,7 @@
   align-items: center;
   height: 100%;
 }
-.content {
+.content_t {
   color: rgb(255, 255, 255);
   background-color: rgb(19, 19, 19);
   font-size: 1.6rem;
