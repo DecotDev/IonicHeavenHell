@@ -28,9 +28,11 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ExploreContainer name="Tab 1 page" />
-      <img class="title" src="@/assets/title_ranking.png" alt="Ranking">
-
+      <img class="title" src="@/assets/title_map.png" alt="Map">
+      <div>
+        <img src="@/assets/map.png" alt="map">
+      </div>
+      
     </ion-content>
   </ion-page>
 </template>
@@ -104,24 +106,9 @@ const router = useRouter();
   
   // Navigate to LoginPage.vue on tap
   const goToProfile = () => {
-    router.push('/tabs/tab1/profile');
+    router.push('/tabs/tab5/profile');
   };
   const goToSettings = () => {
-    router.push('/tabs/tab1/settings');
+    router.push('/tabs/tab5/settings');
   };
 </script>
-
-<!--
-      <ion-card @click="goToNew">
-
-
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-  
-  // Navigate to LoginPage.vue on tap
-  const goToNew = () => {
-    router.push('/login');
-  };
-
--->

@@ -1,37 +1,31 @@
 <template>
   <ion-page class="page">
-    <ion-header class="real_header" >
+    <ion-header class="real_header">
       <ion-toolbar class="header">
-        
         <div class="toolbar-container">
-            
           <ion-buttons slot="start">
-            <!--<ion-button router-link="/tabs/tab3/profile">Profile
-              
-            </ion-button>-->
             <img class="profile" @click="goToProfile" src="@/assets/user_icon.png" alt="User">
-          
           </ion-buttons>
 
-          <!-- Centered title -->
           <div class="title-container">
             <img src="@/assets/logo_round.png" alt="App Logo" class="logo" />
-
-            <!--<ion-title>Home</ion-title>-->
           </div>
 
           <ion-buttons slot="end">
-            <img class="settings" @click="goToSettings" src="@/assets/settings_icon.png" alt="User">
-             <!--<ion-button router-link="/tabs/tab3/settings">Settings</ion-button>           -->
+            <img class="settings" @click="goToSettings" src="@/assets/settings_icon.png" alt="Settings">
           </ion-buttons>
         </div>
       </ion-toolbar>
     </ion-header>
+
     <ion-content :fullscreen="true">
-      <ExploreContainer name="Tab 5 page" />
       <img class="title" src="@/assets/title_map.png" alt="Map">
 
-      
+      <!-- Zoomable & Draggable Image Container -->
+      <div ref="mapContainer" class="map-container">
+        <img ref="mapImage" class="map-image" src="@/assets/map.png" alt="map">
+      </div>
+
     </ion-content>
   </ion-page>
 </template>
@@ -52,7 +46,6 @@
 .real_header {
   height: 90px;
 }
-/* Ensures the toolbar content is correctly aligned */
 .toolbar-container {
   display: flex;
   height: 94px;
@@ -61,8 +54,6 @@
   justify-content: space-between;
   position: relative;
 }
-
-/* Centers the title properly */
 .title-container {
   position: absolute;
   max-width: 24%;
@@ -76,53 +67,80 @@
   align-items: center;
   height: 100%;
 }
-.content {
-  color: rgb(255, 255, 255);
-  background-color: rgb(19, 19, 19);
-  font-size: 1.6rem;
-  border-radius: 10px;
-  padding: 8px 0px 4px 16px;
-  margin-left: 0px;
-  margin-right: -0px;
-}
-.card {
-  color: red;
-  background-color: rgb(37, 37, 37);
-}
 .page {
   color: rgb(255, 0, 0);
   background-color: rgb(255, 0, 0);
 }
+
+/* Pinch-to-Zoom & Pan Styles */
+.map-container {
+  margin-left: 2.5%;
+  border-radius: 20px;
+  margin-top: 10px;
+  overflow: hidden;
+  touch-action: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 680px;
+  position: relative;
+}
+
+.map-image {
+  position: absolute;
+  will-change: transform;
+  transform-origin: center center;
+  transition: transform 0.1s ease-out;
+}
 </style>
 
 <script setup lang="ts">
-import { image } from 'ionicons/icons';
+import { ref } from 'vue';
+import { useGesture } from '@vueuse/gesture';
+import { useRouter } from 'vue-router';
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonButtons, IonCard, IonCardContent, IonCardTitle} from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
-import { useRouter } from 'vue-router';
 
 const router = useRouter();
-  
-  // Navigate to LoginPage.vue on tap
-  const goToProfile = () => {
-    router.push('/tabs/tab5/profile');
-  };
-  const goToSettings = () => {
-    router.push('/tabs/tab5/settings');
-  };
+const goToProfile = () => {
+  router.push('/tabs/tab5/profile');
+};
+const goToSettings = () => {
+  router.push('/tabs/tab5/settings');
+};
+
+// Pinch-to-Zoom & Pan Functionality
+const mapContainer = ref(null);
+const mapImage = ref<HTMLImageElement | null>(null);
+
+
+const state = ref({
+  scale: 1,
+  x: 0,
+  y: 0,
+});
+
+useGesture(
+  {
+    onPinch: ({ offset: [d] }) => {
+      state.value.scale = Math.max(1, Math.min(8, d / 100)); // Scale between 1x and 3x
+    },
+    onDrag: ({ offset: [dx, dy] }) => {
+      state.value.x = dx;
+      state.value.y = dy;
+    },
+  },
+  {
+    domTarget: mapContainer,
+    eventOptions: { passive: false },
+  }
+);
+
+// Watch state and update transform
+import { watchEffect } from 'vue';
+watchEffect(() => {
+  if (mapImage.value) {
+    mapImage.value.style.transform = `translate(${state.value.x}px, ${state.value.y}px) scale(${state.value.scale})`;
+  }
+});
 </script>
-
-<!--
-      <ion-card @click="goToNew">
-
-
-import { useRouter } from 'vue-router';
-
-const router = useRouter();
-  
-  // Navigate to LoginPage.vue on tap
-  const goToNew = () => {
-    router.push('/login');
-  };
-
--->
