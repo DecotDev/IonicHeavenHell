@@ -85,6 +85,7 @@
     width: 50px;
     height: 50px;
     margin-top: 12px;
+    margin-bottom: 6px;
     margin-left: 16px;
     margin-right: 16px;
     align-self: center;

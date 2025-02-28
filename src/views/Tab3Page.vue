@@ -28,7 +28,6 @@
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ExploreContainer name="Tab 3 page" />
       <img class="title" src="@/assets/title_home.png" alt="Dev news">
       <ion-card @click="goToNew" class="card">
         <ion-card-content>

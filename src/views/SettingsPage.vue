@@ -10,14 +10,16 @@
             <label>Volume</label>
             <ion-range min="0" max="100" step="1" v-model="volume"></ion-range>
           </div>
-  
-          <ion-toggle v-model="notifications">Receive Notifications</ion-toggle>
-          <ion-toggle v-model="autoUpdate">Auto Update</ion-toggle>
-          <ion-toggle v-model="diagnosticData">Send Diagnostic Data</ion-toggle>
-  
-          <ion-button expand="full" @click="goToHelp">HELP</ion-button>
-          <ion-button expand="full" color="danger" @click="logout">LOG OUT</ion-button>
+          <div class="togles">
+          <ion-toggle class="notis" v-model="notifications">Receive Notifications</ion-toggle>
+          <ion-toggle class="notis" v-model="autoUpdate">Auto Update</ion-toggle>
+          <ion-toggle class="notis" v-model="diagnosticData">Send Diagnostic Data</ion-toggle>
+          </div>
+          <div>
+          <ion-button class="logoutclass" expand="full" @click="logout">LOG OUT</ion-button>
+          </div>
         </div>
+        <div class="down_part"></div>
       </ion-content>
     </ion-page>
   </template>
@@ -33,21 +35,39 @@
   const autoUpdate = ref(true);
   const diagnosticData = ref(false);
   
-  const goToHelp = () => {
-    router.push('/tabs/tab3/help');
-  };
-  
+
   const logout = () => {
     router.push('/login');
   };
   </script>
   
   <style scoped>
+  .logoutclass {
+    margin-top: 60px;
+    color: rgb(0, 0, 0) !important;
+    font-size: 20px !important;
+    
+  }
+  .togles {
+  align-content: end;
+  }
+  .notis{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+  }
   .settings-container {
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     background: url('@/assets/red_wave.svg') no-repeat bottom;
     background-size: cover;
+  }
+  .down_part {
+    background: #b20003;
+    margin-top: -39%;
+    width: 100%;
+    height: 61%;
+    z-index: -10;
   }
   
   .logo {

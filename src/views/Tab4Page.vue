@@ -49,9 +49,10 @@
   
 }
 .down_text {
-  margin-left: 6px;
-  height: 140px;
-  margin-right: 6px;
+  border-radius: 10px;
+  margin-left: 9px;
+  height: 168px;
+  margin-right: 9px;
   margin-bottom: -10px;
   padding-left: 8px;
   padding-right: 10px;
@@ -110,7 +111,7 @@
 }
 .content {
   color: rgb(255, 255, 255);
-  background-color: rgb(19, 19, 19);
+  background-color: rgb(255, 0, 0);
   font-size: 1.6rem;
   border-radius: 10px;
   padding: 8px 0px 4px 16px;

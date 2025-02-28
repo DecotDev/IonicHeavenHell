@@ -1,5 +1,5 @@
 <template>
-    <ion-page @click="reloadPage" >
+    <ion-page >
       <ion-header>
         <ion-toolbar>
           <ion-title>Profile page</ion-title>
@@ -27,9 +27,9 @@
       </ion-content>
   
       <!-- Bootstrap Modal -->
-      <div class="modal fade" id="awardModal" tabindex="-1" aria-labelledby="awardModalLabel" aria-hidden="true">
+      <div class="modal fade" id="awardModal" tabindex="-1" aria-labelledby="awardModalLabel" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#awardModal">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content" >
             <div class="modal-body text-center">
               <img src="@/assets/figma_award_desc1.png" alt="Award Description" class="img-fluid">
             </div>
@@ -41,25 +41,20 @@
   
   <script setup>
   import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-  var num = 0;
-  const reloadPage = (event) => {
-  const modalContent = document.querySelector('.modal-content');
   
-  // Reload only if clicking outside the modal content
-  if (!modalContent.contains(event.target)) {
-    setTimeout(() => {
-        window.location.reload();
-    }, 4000);
-
-  }
-};
   </script>
   
   <style>
+
   ion-content {
     text-align: center;
   }
-  
+  .modal-backdrop {
+    z-index: -9 !important;
+  }
+  .img-fluid {
+    z-index: 10;
+  }
   .vue_logo {
     padding-left: 9%;
   }
