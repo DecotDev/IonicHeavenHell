@@ -1,5 +1,5 @@
 <template>
-    <ion-page>
+    <ion-page @click="nextPage">
       <ion-content class="logging-content">
         <!-- Red Wave Background -->
         <div class="red-wave"></div>
@@ -23,6 +23,10 @@
   
   const router = useRouter();
   
+  const nextPage = () => {
+    router.push('/terms/');
+  };
+
   onMounted(() => {
     setTimeout(() => {
       router.push('/terms'); // Redirects to Terms page after 5 seconds

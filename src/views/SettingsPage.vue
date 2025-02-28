@@ -37,7 +37,7 @@
   
 
   const logout = () => {
-    router.push('/login');
+    router.replace('/login');
   };
   </script>
   
