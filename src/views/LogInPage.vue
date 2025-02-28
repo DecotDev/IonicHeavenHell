@@ -113,7 +113,7 @@
   /* Input Styling */
   .input {
     font-family: 'Inknut Antiqua';
-
+    font-size: 20px;
     width: 100%;
     padding-left: 10%;
     border-radius: 25px;
