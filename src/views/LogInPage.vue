@@ -94,6 +94,7 @@
   
   /* Input Fields - Rounded, Shadowed */
   .input-field {
+    
     margin-top: 8%;
     width: 100%;
     background: #979797;
@@ -111,6 +112,8 @@
   
   /* Input Styling */
   .input {
+    font-family: 'Inknut Antiqua';
+
     width: 100%;
     padding-left: 10%;
     border-radius: 25px;
@@ -128,9 +131,11 @@
   
   /* Sign In Button - Red */
   .sign-in-button {
+    font-family: 'Inknut Antiqua';
+    font-weight: bolder;
     width: 100%;
     height: 60px;
-    font-size: 2vh;
+    font-size: 28px;
     margin-top: 6%;
     color: #FF0000;
     color-scheme: #FF0000;

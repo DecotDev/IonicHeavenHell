@@ -57,10 +57,12 @@
   }
   
   .welcome-title {
+    font-family: 'Inknut Antiqua';
+
     font-size: 4vh;
     left: 0;
     
-    font-weight: bold;
+    font-weight: bolder;
     color: rgb(255, 0, 0);
   }
   
@@ -86,15 +88,17 @@
   .terms-title {
     position: absolute;
     top: 20%;
-    left: 25%;
+    left: 30%;
     transform: translateX(-50%);
-    font-size: 3vh;
+    font-size: 36px;
     font-weight: bold;
     color: rgb(0, 0, 0);
+    font-family: 'Inknut Antiqua';
   }
   
   /* Scrollable Terms Text */
   .terms-text {
+    font-family: 'Inknut Antiqua';
     position: absolute;
     top: 28%;
     width: 94%;

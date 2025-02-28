@@ -92,9 +92,10 @@
   height: 100%;
 }
 .content_t {
+  font-family: 'Inknut Antiqua';
   color: rgb(255, 255, 255);
   background-color: rgb(19, 19, 19);
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   border-radius: 10px;
   padding: 8px 0px 4px 16px;
   margin-left: 0px;

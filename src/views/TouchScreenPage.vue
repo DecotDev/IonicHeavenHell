@@ -60,7 +60,9 @@
   
   /* Start Text */
   .start-text {
-    font-size: 3vh;
+    font-family: 'Inknut Antiqua';
+
+    font-size: 48px;
     font-weight: bold;
     color: black;
   }

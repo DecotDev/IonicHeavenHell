@@ -73,11 +73,12 @@
   }
   
   .desc {
+    font-family: 'Inknut Antiqua';
     padding-top: 140px;
     padding-left: 32px;
     padding-right: 46px;
     color: #000000;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     text-align: left;
   }
@@ -106,6 +107,7 @@
   }
   
   .username {
+    font-family: 'Inknut Antiqua';
     margin-top: 4px;
     font-size: 4rem;
     font-weight: bolder;

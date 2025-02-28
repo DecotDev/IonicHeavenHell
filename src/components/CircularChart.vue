@@ -7,8 +7,8 @@
   
   <script setup lang="ts">
   import { computed } from 'vue';
-  import { Doughnut } from 'vue-chartjs';
   import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
+  import { Doughnut } from 'vue-chartjs';
   
   ChartJS.register(ArcElement, Tooltip);
   

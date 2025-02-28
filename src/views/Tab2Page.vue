@@ -184,8 +184,9 @@ const coopAchievementsData = ref({
   height: 320px;
 }
 .mode-title {
+  font-family: 'Inknut Antiqua';
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.50);
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
   color: #ff0000;
   font-size: 2.4rem;
@@ -204,14 +205,17 @@ const coopAchievementsData = ref({
   height: 120px;
 }
 .chart-item p {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #000;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.90);
+
   font-weight: bolder;
   font-size: 18px;
   color: #ff0000;
   margin-bottom: 10px;
+  font-family: 'Inknut Antiqua';
+
 }
 .chart-label {
+  
   position: absolute;
   top: 80%;
   left: 50%;

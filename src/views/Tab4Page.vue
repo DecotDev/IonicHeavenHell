@@ -42,6 +42,8 @@
 
 <style scoped>
 .promt_text {
+  font-family: 'Inknut Antiqua';
+
   text-align: center;
   padding-left: 6px;
   padding-right: 6px;
@@ -49,6 +51,8 @@
   
 }
 .down_text {
+  font-family: 'Inknut Antiqua';
+
   border-radius: 10px;
   margin-left: 9px;
   height: 168px;
@@ -57,7 +61,7 @@
   padding-left: 8px;
   padding-right: 10px;
   padding-top: 8px;
-  font-size: 1.2rem;
+  font-size: 21px;
   text-align: justify;
   color: white;
   background-color: rgb(26, 25, 25);

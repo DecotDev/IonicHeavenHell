@@ -95,6 +95,7 @@
   .player-name {
     font-size: 1.4rem;
     color: white;
+    font-family: 'Inknut Antiqua';
   }
   </style>
   

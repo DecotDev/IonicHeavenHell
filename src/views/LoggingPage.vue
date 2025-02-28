@@ -76,15 +76,17 @@
   
   /* Main Text - Big */
   .main-text {
-    font-size: 3.4vh;
+    font-family: 'Inknut Antiqua';
+    font-size: 36px;
     font-weight: bold;
     color: black;
-    margin-bottom: 20%;
+    margin-bottom: 16%;
   }
   
   /* Sub Text - Smaller & Near Bottom */
   .sub-text {
-    font-size: 2vh;
+    font-family: 'Inknut Antiqua';
+    font-size: 22px;
     color: black;
 
   }

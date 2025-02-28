@@ -4,10 +4,10 @@
         <div class="settings-container">
           <img src="@/assets/logo_round.png" class="logo" />
   
-          <h1>Settings</h1>
+          <h1 class="set">Settings</h1>
   
           <div class="volume-control">
-            <label>Volume</label>
+            <label class="vol">Volume</label>
             <ion-range min="0" max="100" step="1" v-model="volume"></ion-range>
           </div>
           <div class="togles">
@@ -42,7 +42,21 @@
   </script>
   
   <style scoped>
+  .set {
+    font-family: 'Inknut Antiqua';
+    font-weight: bolder;
+    font-size: 36px;
+    color: red;
+  }
+  .vol {
+    font-family: 'Inknut Antiqua';
+    font-size: 22px;
+
+  }
   .logoutclass {
+    font-family: 'Inknut Antiqua';
+    font-size: 36px;
+    font-weight: bolder;
     margin-top: 60px;
     color: rgb(0, 0, 0) !important;
     font-size: 20px !important;
@@ -52,8 +66,9 @@
   align-content: end;
   }
   .notis{
+    font-family: 'Inknut Antiqua';
     color: black;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
   }
   .settings-container {
@@ -66,7 +81,7 @@
     background: #b20003;
     margin-top: -39%;
     width: 100%;
-    height: 61%;
+    height: 59%;
     z-index: -10;
   }
   
